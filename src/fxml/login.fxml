@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="492.0" prefWidth="701.0" style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.Login">
+    <children>
+        <AnchorPane layoutY="-1.0" prefHeight="504.0" prefWidth="325.0" style="-fx-background-color: #5AA9F8;">
+            <children>
+                <Text fill="WHITE" layoutX="17.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="TipsHunt Hotel">
+                    <font>
+                        <Font size="44.0"/>
+                    </font>
+                </Text>
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="88.0" layoutY="140.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@../images/icons8_Work_in_Bed_96px.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <JFXTextField fx:id="username" layoutX="351.0" layoutY="162.0" prefHeight="38.0" prefWidth="312.0"
+                      promptText="UserName">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </JFXTextField>
+        <JFXPasswordField fx:id="password" layoutX="351.0" layoutY="224.0" prefHeight="25.0" prefWidth="312.0"
+                          promptText="Password">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </JFXPasswordField>
+        <JFXButton fx:id="signin" layoutX="351.0" layoutY="304.0" prefHeight="44.0" prefWidth="312.0"
+                   style="-fx-background-color: #5AA9F8;" text="SignIn" textFill="WHITE">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="signup" layoutX="351.0" layoutY="356.0" prefHeight="44.0" prefWidth="312.0"
+                   style="-fx-border-color: #5AA9F8; -fx-border-radius: 5px;" text="SignUp" textFill="#838181">
+            <font>
+                <Font size="15.0"/>
+            </font>
+        </JFXButton>
+        <ImageView fitHeight="101.0" fitWidth="122.0" layoutX="457.0" layoutY="42.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../images/icons8_Lock_96px_1.png"/>
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

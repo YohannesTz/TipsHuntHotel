@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="573.0"
+            prefWidth="745.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.RoomReservation">
+    <center>
+        <TableView fx:id="roomtableview" focusTraversable="false" prefHeight="513.0" prefWidth="661.0"
+                   stylesheets="@../styles/style.css" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="roomnumbercol" prefWidth="95.0" text="Room No."/>
+                <TableColumn fx:id="typecol" minWidth="5.0" prefWidth="202.0" text="has AC"/>
+                <TableColumn fx:id="capacitycol" minWidth="5.0" prefWidth="149.0" text="Capacity"/>
+                <TableColumn fx:id="statuscol" minWidth="5.0" prefWidth="278.0" text="Is Availabe"/>
+            </columns>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0"/>
+            </BorderPane.margin>
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem fx:id="addroomcontext" mnemonicParsing="false" text="Add Room"/>
+                        <MenuItem mnemonicParsing="false" text="Edit Room"/>
+                        <MenuItem mnemonicParsing="false" text="Delete Room"/>
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </TableView>
+    </center>
+    <top>
+        <HBox alignment="CENTER" prefHeight="47.0" prefWidth="688.0" BorderPane.alignment="CENTER">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Room Reservation ">
+                    <font>
+                        <Font size="20.0"/>
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+    </top>
+</BorderPane>
