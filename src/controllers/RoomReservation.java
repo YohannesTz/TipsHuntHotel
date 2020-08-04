@@ -51,9 +51,9 @@ public class RoomReservation implements Initializable {
 
     private void initColumn() {
         roomnumbercol.setCellValueFactory(new PropertyValueFactory<>("roomnumber"));
-        typecol.setCellValueFactory(new PropertyValueFactory<>("hasac"));
+        typecol.setCellValueFactory(new PropertyValueFactory<>("Hasac"));
         capacitycol.setCellValueFactory(new PropertyValueFactory<>("capacity"));
-        statuscol.setCellValueFactory(new PropertyValueFactory<>("status"));
+        statuscol.setCellValueFactory(new PropertyValueFactory<>("Status"));
     }
 
 

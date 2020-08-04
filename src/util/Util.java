@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -29,6 +30,7 @@ public class Util {
         if (!iswindowed) {
             stage.initStyle(StageStyle.UNDECORATED);
         }
+        stage.getIcons().add(new Image("/images/icon.png"));
         stage.show();
     }
 

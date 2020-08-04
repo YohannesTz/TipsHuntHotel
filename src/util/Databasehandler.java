@@ -41,7 +41,7 @@ public class Databasehandler {
                 "(ID INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "NAME TEXT  NOT NULL," +
                 "CODE CHAR(50) NOT NULL," +
-                "TYPE BOOLEAN NOT NULL," +
+                "TYPE TEXT," +
                 "PRICE INT NOT NULL)";
         try {
             statement = connection.createStatement();
@@ -59,13 +59,14 @@ public class Databasehandler {
         }
     }
 
+    //0 is equal to false and 1 is equal to true
     private void setupRoomsTable() {
         String createRoomstable = "CREATE TABLE `ROOMS` (" +
                 "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "ROOMNUMBER INT NOT NULL," +
-                "HASAC BOOLEAN NOT NULL, " +
+                "HASAC INT DEFAULT 1, " +
                 "CAPACITY INT NOT NULL," +
-                "ISBOOKED BOOLEAN NOT NULL);";
+                "ISBOOKED INT DEFAULT 0);";
         System.out.println(createRoomstable);
 
         try {
@@ -91,6 +92,7 @@ public class Databasehandler {
                 "'" + room.getCapacity() + "'," +
                 "'" + room.isStatus() + "'" +
                 ");";
+
         System.out.println(insertRoom);
         try {
             statement = connection.createStatement();
@@ -101,12 +103,13 @@ public class Databasehandler {
         }
     }
 
+
     public void addDish(Dish dish) {
         String insertDish = "INSERT INTO `RESTAURANT` (NAME, CODE, TYPE, PRICE)" +
                 "VALUES (" +
                 "'" + dish.getDishname() + "'," +
                 "'" + dish.getDishcode() + "'," +
-                "'" + dish.getType() + "'," +
+                "'" + getValueasInt(dish.getType()) + "'," +
                 "'" + dish.getPrice() + "'" +
                 ");";
         System.out.println(insertDish);
@@ -143,6 +146,7 @@ public class Databasehandler {
                 boolean hasac = rs.getBoolean("HASAC");
                 int capacity = rs.getInt("CAPACITY");
                 boolean status = rs.getBoolean("ISBOOKED");
+                System.out.println("--->" + roomnumber + " - " + hasac + " - " + capacity + " - " + status + " - ");
                 Room room = new Room(roomnumber, hasac, capacity, status);
                 System.out.println(room.toString());
                 resultrooms.add(room);
@@ -174,5 +178,10 @@ public class Databasehandler {
             e.printStackTrace();
         }
         return resultDishes;
+    }
+
+    //0 is equal to false and 1 is equal to true
+    public int getValueasInt(boolean input) {
+        return input ? 1 : 0;
     }
 }

@@ -7,7 +7,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="492.0" prefWidth="701.0" style="-fx-background-color: white;"
             xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
@@ -15,16 +14,10 @@
     <children>
         <AnchorPane layoutY="-1.0" prefHeight="504.0" prefWidth="325.0" style="-fx-background-color: #5AA9F8;">
             <children>
-                <Text fill="WHITE" layoutX="17.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0"
-                      text="TipsHunt Hotel">
-                    <font>
-                        <Font size="44.0"/>
-                    </font>
-                </Text>
-                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="88.0" layoutY="140.0" pickOnBounds="true"
+                <ImageView fitHeight="246.0" fitWidth="351.0" layoutX="40.0" layoutY="129.0" pickOnBounds="true"
                            preserveRatio="true">
                     <image>
-                        <Image url="@../images/icons8_Work_in_Bed_96px.png"/>
+                        <Image url="@../images/tipshuntshotel-transparentbg.png"/>
                     </image>
                 </ImageView>
             </children>
@@ -56,7 +49,7 @@
         <ImageView fitHeight="101.0" fitWidth="122.0" layoutX="457.0" layoutY="42.0" pickOnBounds="true"
                    preserveRatio="true">
             <image>
-                <Image url="@../images/icons8_Lock_96px_1.png"/>
+                <Image url="@../images/icon_lock.png"/>
             </image>
         </ImageView>
     </children>
